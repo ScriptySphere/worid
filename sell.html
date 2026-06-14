@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post Free Ad — BuySell Bangladesh</title>
+  <meta name="description" content="Post a free ad on BuySell Bangladesh. Sell anything from electronics to vehicles across Bangladesh."/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-logo">BuySell<span>BD</span></div>
+  <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">BuySell<span>BD</span></a>
+    <div class="nav-search search-with-suggestions">
+      <input type="text" placeholder="Search products..."/>
+      <button class="nav-search-btn" onclick="window.location='products.html'"><i class="fas fa-search"></i> Search</button>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Browse</a>
+      <a href="categories.html" class="nav-link">Categories</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+      <a href="sell.html" class="nav-sell-btn active"><i class="fas fa-plus"></i> Sell Now</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="products.html" class="nav-link">Browse Products</a>
+  <a href="categories.html" class="nav-link">Categories</a>
+  <a href="sell.html" class="nav-link">Post Free Ad</a>
+</div>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> Post Free Ad</div>
+  <h1><i class="fas fa-plus-circle"></i> Post a Free Ad</h1>
+  <p>Reach millions of buyers across Bangladesh — it's completely free!</p>
+</section>
+
+<div class="sell-container">
+
+  <!-- Progress Steps -->
+  <div class="progress-steps">
+    <div class="step active">
+      <div class="step-circle">1</div>
+      <div class="step-label">Seller Info</div>
+    </div>
+    <div class="step">
+      <div class="step-circle">2</div>
+      <div class="step-label">Product Info</div>
+    </div>
+    <div class="step">
+      <div class="step-circle">3</div>
+      <div class="step-label">Photos & Price</div>
+    </div>
+    <div class="step">
+      <div class="step-circle">4</div>
+      <div class="step-label">Review & Submit</div>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <form id="sell-form">
+
+    <!-- Step 1: Seller Information -->
+    <div class="form-step active">
+      <div class="form-card">
+        <div class="form-title"><i class="fas fa-user"></i> Seller Information</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Full Name <span>*</span></label>
+            <input type="text" class="form-input" placeholder="e.g. Mohammad Rahim" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mobile Number <span>*</span></label>
+            <input type="tel" class="form-input" placeholder="e.g. 01XXXXXXXXX" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="your@email.com"/>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">District <span>*</span></label>
+            <select class="form-input" required>
+              <option value="">Select District</option>
+              <option>Dhaka</option>
+              <option>Chattogram</option>
+              <option>Sylhet</option>
+              <option>Rajshahi</option>
+              <option>Khulna</option>
+              <option>Barishal</option>
+              <option>Rangpur</option>
+              <option>Mymensingh</option>
+              <option>Cox's Bazar</option>
+              <option>Gazipur</option>
+              <option>Narayanganj</option>
+              <option>Cumilla</option>
+              <option>Feni</option>
+              <option>Noakhali</option>
+              <option>Brahmanbaria</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Area / Thana <span>*</span></label>
+            <input type="text" class="form-input" placeholder="e.g. Gulshan, Mirpur, Agrabad" required/>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <div></div>
+        <button type="button" class="btn btn-primary" data-next>
+          Next: Product Info <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2: Product Information -->
+    <div class="form-step">
+      <div class="form-card">
+        <div class="form-title"><i class="fas fa-box"></i> Product Information</div>
+
+        <div class="form-group">
+          <label class="form-label">Product Name <span>*</span></label>
+          <input type="text" class="form-input" placeholder="e.g. Apple iPhone 14 Pro 256GB Deep Purple" required/>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Category <span>*</span></label>
+            <select class="form-input" required>
+              <option value="">Select Category</option>
+              <option>Mobile Phones</option>
+              <option>Laptops & Computers</option>
+              <option>Electronics & Gadgets</option>
+              <option>Vehicles — Cars</option>
+              <option>Vehicles — Motorcycles</option>
+              <option>Property — For Sale</option>
+              <option>Property — For Rent</option>
+              <option>Fashion & Clothing</option>
+              <option>Home Appliances</option>
+              <option>Furniture</option>
+              <option>Books & Education</option>
+              <option>Sports & Fitness</option>
+              <option>Jobs & Services</option>
+              <option>Agriculture</option>
+              <option>Others</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Condition <span>*</span></label>
+            <select class="form-input" required>
+              <option value="">Select Condition</option>
+              <option>Brand New</option>
+              <option>Like New</option>
+              <option>Good Condition</option>
+              <option>Fair Condition</option>
+              <option>For Parts / Not Working</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Brand</label>
+            <input type="text" class="form-input" placeholder="e.g. Samsung, Apple, Sony"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Model / Year</label>
+            <input type="text" class="form-input" placeholder="e.g. Galaxy S23, 2022 Model"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Description <span>*</span></label>
+          <textarea class="form-input" rows="5" placeholder="Describe your product in detail. Include specifications, reason for selling, any defects, and original price..." required></textarea>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button type="button" class="btn btn-outline" style="border-color:var(--gray-light);color:var(--navy-soft);" data-prev>
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <button type="button" class="btn btn-primary" data-next>
+          Next: Photos & Price <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 3: Photos & Price -->
+    <div class="form-step">
+      <div class="form-card">
+        <div class="form-title"><i class="fas fa-camera"></i> Upload Photos</div>
+        <div class="image-upload" onclick="document.getElementById('product-images').click()">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p>Click to upload photos or drag & drop</p>
+          <span>JPG, PNG up to 5MB · Max 6 photos</span>
+          <input type="file" id="product-images" accept="image/*" multiple style="display:none"/>
+        </div>
+        <div id="upload-preview" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.75rem;"></div>
+        <p style="font-size:0.8rem;color:var(--gray-mid);margin-top:0.5rem;"><i class="fas fa-lightbulb" style="color:var(--warning);"></i> Tip: Clear, well-lit photos get 3x more responses</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-title"><i class="fas fa-tag"></i> Pricing & Delivery</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Asking Price (৳) <span>*</span></label>
+            <input type="number" class="form-input" placeholder="e.g. 45000" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Negotiable?</label>
+            <select class="form-input">
+              <option>Yes, price is negotiable</option>
+              <option>No, fixed price</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Delivery Method <span>*</span></label>
+          <div style="display:flex;flex-direction:column;gap:0.6rem;margin-top:0.25rem;">
+            <label class="filter-option"><input type="checkbox" checked/><span class="filter-label">Meet in Person (Preferred)</span></label>
+            <label class="filter-option"><input type="checkbox"/><span class="filter-label">Sundarban Courier</span></label>
+            <label class="filter-option"><input type="checkbox"/><span class="filter-label">SA Paribahan</span></label>
+            <label class="filter-option"><input type="checkbox"/><span class="filter-label">Pathao / Redx / Steadfast</span></label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Preferred Payment</label>
+          <div style="display:flex;flex-direction:column;gap:0.6rem;margin-top:0.25rem;">
+            <label class="filter-option"><input type="checkbox" checked/><span class="filter-label">Cash on Delivery</span></label>
+            <label class="filter-option"><input type="checkbox"/><span class="filter-label">bKash</span></label>
+            <label class="filter-option"><input type="checkbox"/><span class="filter-label">Nagad</span></label>
+            <label class="filter-option"><input type="checkbox"/><span class="filter-label">Rocket</span></label>
+            <label class="filter-option"><input type="checkbox"/><span class="filter-label">Bank Transfer</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button type="button" class="btn btn-outline" style="border-color:var(--gray-light);color:var(--navy-soft);" data-prev>
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <button type="button" class="btn btn-primary" data-next>
+          Review Ad <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 4: Review & Submit -->
+    <div class="form-step">
+      <div class="form-card">
+        <div class="form-title"><i class="fas fa-check-circle"></i> Review Your Ad</div>
+        <div style="background:var(--primary-pale);border-radius:var(--radius-md);padding:1.25rem;margin-bottom:1rem;">
+          <p style="font-size:0.9rem;color:var(--navy-soft);line-height:1.7;">
+            ✅ Your ad will be reviewed by our team within <strong>30 minutes</strong>.<br>
+            ✅ You'll receive an SMS confirmation on your registered mobile.<br>
+            ✅ Listing stays active for <strong>60 days</strong> (renewable for free).<br>
+            ✅ Basic listing is <strong>100% free</strong> — no hidden charges.
+          </p>
+        </div>
+
+        <!-- Terms -->
+        <div style="background:var(--gray-pale);border-radius:var(--radius-md);padding:1rem;margin-bottom:1rem;">
+          <label class="filter-option" style="align-items:flex-start;gap:0.75rem;">
+            <input type="checkbox" required style="margin-top:3px;"/>
+            <span style="font-size:0.88rem;color:var(--navy-soft);line-height:1.6;">
+              I agree to BuySell Bangladesh's <a href="#" style="color:var(--primary);">Terms of Service</a> and <a href="#" style="color:var(--primary);">Privacy Policy</a>. I confirm that I am the rightful owner of the item and all information provided is accurate.
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-nav">
+        <button type="button" class="btn btn-outline" style="border-color:var(--gray-light);color:var(--navy-soft);" data-prev>
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <button type="submit" class="btn btn-primary btn-lg">
+          <i class="fas fa-paper-plane"></i> Submit Free Ad
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+  <!-- Success State -->
+  <div id="success-animation" class="success-animation">
+    <div class="success-checkmark"><i class="fas fa-check"></i></div>
+    <div class="success-title">Ad Submitted Successfully!</div>
+    <p class="success-message">
+      Your listing has been submitted successfully and is pending review. Our team will verify and publish it within <strong>30 minutes</strong>. You will receive a confirmation SMS on your registered number.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Go to Home</a>
+      <a href="products.html" class="btn btn-outline" style="border-color:var(--gray-light);color:var(--navy-soft);"><i class="fas fa-search"></i> Browse Products</a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-brand-logo">BuySell<span>BD</span></div><p class="footer-brand-desc">Bangladesh's most trusted online marketplace.</p></div>
+    <div><div class="footer-col-title">Quick Links</div><div class="footer-links"><a href="index.html">Home</a><a href="products.html">Browse</a><a href="sell.html">Sell Now</a></div></div>
+    <div><div class="footer-col-title">Support</div><div class="footer-links"><a href="contact.html">Help Center</a><a href="#">Safety Tips</a></div></div>
+    <div><div class="footer-col-title">Contact</div><div class="footer-links"><a href="mailto:support@buysellbd.com.bd">support@buysellbd.com.bd</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 BuySell Bangladesh. All rights reserved.</span><span style="color:rgba(255,255,255,0.4);">Made with ❤️ in Bangladesh 🇧🇩</span></div>
+</footer>
+
+<button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>

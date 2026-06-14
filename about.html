@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — BuySell Bangladesh</title>
+  <meta name="description" content="Learn about BuySell Bangladesh — our story, mission, vision, and the team behind Bangladesh's #1 online marketplace."/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-logo">BuySell<span>BD</span></div>
+  <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">BuySell<span>BD</span></a>
+    <div class="nav-search search-with-suggestions">
+      <input type="text" placeholder="Search products..."/>
+      <button class="nav-search-btn" onclick="window.location='products.html'"><i class="fas fa-search"></i> Search</button>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Browse</a>
+      <a href="categories.html" class="nav-link">Categories</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+      <a href="sell.html" class="nav-sell-btn"><i class="fas fa-plus"></i> Sell Now</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="products.html" class="nav-link">Browse Products</a>
+  <a href="categories.html" class="nav-link">Categories</a>
+  <a href="sell.html" class="nav-link">Post Free Ad</a>
+</div>
+
+<!-- Hero -->
+<section style="background:linear-gradient(135deg,#0F172A 0%,#0EA5E9 100%);padding:6rem 1.5rem;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2280%22 cy=%2220%22 r=%2240%22 fill=%22rgba(255,255,255,0.04)%22/><circle cx=%2220%22 cy=%2280%22 r=%2230%22 fill=%22rgba(255,255,255,0.04)%22/></svg>');pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;max-width:700px;margin:0 auto;">
+    <div class="breadcrumb" style="justify-content:center;margin-bottom:1.5rem;"><a href="index.html" style="color:var(--primary-light);">Home</a> <i class="fas fa-chevron-right"></i> <span style="color:rgba(255,255,255,0.6);">About Us</span></div>
+    <h1 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:white;margin-bottom:1rem;">Our Story</h1>
+    <p style="color:rgba(255,255,255,0.75);font-size:1.1rem;line-height:1.7;">We started BuySell Bangladesh with a simple dream — to make buying and selling easy, safe, and accessible for every Bangladeshi, from Teknaf to Tetulia.</p>
+  </div>
+</section>
+
+<!-- Story -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="reveal">
+      <div>
+        <div class="section-eyebrow">Who We Are</div>
+        <h2 class="section-title">Built for Bangladesh, by Bangladeshis</h2>
+        <p style="color:var(--gray-dark);line-height:1.8;margin-bottom:1rem;">Founded in 2020, BuySell Bangladesh was born from the idea that commerce should be simple, trusted, and local. We saw millions of Bangladeshis struggling to find reliable platforms to buy and sell — so we built one.</p>
+        <p style="color:var(--gray-dark);line-height:1.8;margin-bottom:1.5rem;">Today, we are proud to serve over 850,000 users across all 64 districts of Bangladesh, with more than 2.4 million active listings in 16 major categories. From a small apartment in Dhaka, we have grown into the country's most trusted marketplace.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <div style="text-align:center;background:var(--primary-pale);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;">
+            <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:var(--primary);">2020</div>
+            <div style="font-size:0.82rem;color:var(--gray-dark);">Founded</div>
+          </div>
+          <div style="text-align:center;background:var(--primary-pale);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;">
+            <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:var(--primary);">64</div>
+            <div style="font-size:0.82rem;color:var(--gray-dark);">Districts</div>
+          </div>
+          <div style="text-align:center;background:var(--primary-pale);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;">
+            <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:var(--primary);">2.4M+</div>
+            <div style="font-size:0.82rem;color:var(--gray-dark);">Listings</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg,var(--primary),var(--navy));border-radius:var(--radius-xl);padding:3rem;text-align:center;color:white;">
+        <div style="font-size:5rem;margin-bottom:1rem;">🇧🇩</div>
+        <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;margin-bottom:0.75rem;">Proudly Bangladeshi</div>
+        <p style="opacity:0.8;font-size:0.95rem;line-height:1.7;">Every feature, every category, every interface element — designed specifically for the needs of Bangladeshi buyers and sellers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Our Purpose</div>
+      <h2 class="section-title">Mission & Vision</h2>
+    </div>
+    <div class="about-mission-grid reveal">
+      <div class="about-mission-card">
+        <div style="width:48px;height:48px;background:var(--primary-pale);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.3rem;margin-bottom:1rem;"><i class="fas fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To empower every Bangladeshi — from rural farmers to urban entrepreneurs — with a safe, simple, and powerful platform to buy, sell, and trade goods and services. We believe commerce should be accessible to all, regardless of location, education, or income level.</p>
+      </div>
+      <div class="about-mission-card" style="border-top-color:var(--success);">
+        <div style="width:48px;height:48px;background:#D1FAE5;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--success);font-size:1.3rem;margin-bottom:1rem;"><i class="fas fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>To become South Asia's most trusted regional marketplace — where every transaction is safe, every seller is verified, and every buyer finds exactly what they need. We envision a digitally connected Bangladesh where the economy thrives through technology.</p>
+      </div>
+      <div class="about-mission-card" style="border-top-color:var(--warning);">
+        <div style="width:48px;height:48px;background:#FEF3C7;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--warning);font-size:1.3rem;margin-bottom:1rem;"><i class="fas fa-heart"></i></div>
+        <h3>Our Values</h3>
+        <p>Trust. Transparency. Innovation. We operate with zero tolerance for fraud and ensure every interaction on our platform meets the highest ethical standards. We put our users — buyers and sellers alike — at the center of every decision we make.</p>
+      </div>
+      <div class="about-mission-card" style="border-top-color:var(--error);">
+        <div style="width:48px;height:48px;background:#FEE2E2;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--error);font-size:1.3rem;margin-bottom:1rem;"><i class="fas fa-shield-alt"></i></div>
+        <h3>Our Commitment</h3>
+        <p>We are committed to building a safer digital marketplace. Our fraud detection, seller verification, and payment protection systems work 24/7 to ensure every deal is legitimate. Your trust is our most valuable asset.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Why BuySell BD</div>
+      <h2 class="section-title">What Makes Us Different</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <div class="trust-icon"><i class="fas fa-map-marked-alt"></i></div>
+        <div class="trust-title">All 64 Districts</div>
+        <div class="trust-desc">We're the only marketplace with genuine coverage in all 64 districts of Bangladesh, including rural and remote areas.</div>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="trust-title">Mobile-First Design</div>
+        <div class="trust-desc">Built for Bangladesh's smartphone users. Our platform works perfectly on any device, even on slow mobile connections.</div>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-icon"><i class="fas fa-language"></i></div>
+        <div class="trust-title">Bangla Support</div>
+        <div class="trust-desc">Full Bangla language support is on our roadmap. We're committed to making the platform accessible to all Bangladeshis.</div>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-icon"><i class="fas fa-rocket"></i></div>
+        <div class="trust-title">30-Min Listing Live</div>
+        <div class="trust-desc">Post your ad today and it goes live in 30 minutes after a quick review. The fastest listing activation in Bangladesh.</div>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-icon"><i class="fas fa-money-bill-wave"></i></div>
+        <div class="trust-title">Always Free</div>
+        <div class="trust-desc">Basic listings are and always will be free. No hidden charges, no surprise fees. Earn more by selling more.</div>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-icon"><i class="fas fa-users"></i></div>
+        <div class="trust-title">Community-Driven</div>
+        <div class="trust-desc">Our community ratings, reviews, and verified seller badges create a self-regulating, trustworthy marketplace.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section section-alt stats-trigger">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Our Growth</div>
+      <h2 class="section-title">BuySell Bangladesh in Numbers</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal"><div class="stat-icon"><i class="fas fa-list"></i></div><span class="stat-num" data-target="2400000" data-suffix="+">0</span><div class="stat-label">Active Listings</div></div>
+      <div class="stat-card reveal"><div class="stat-icon"><i class="fas fa-users"></i></div><span class="stat-num" data-target="850000" data-suffix="+">0</span><div class="stat-label">Registered Users</div></div>
+      <div class="stat-card reveal"><div class="stat-icon"><i class="fas fa-handshake"></i></div><span class="stat-num" data-target="5200000" data-suffix="+">0</span><div class="stat-label">Successful Deals</div></div>
+      <div class="stat-card reveal"><div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div><span class="stat-num" data-target="64">0</span><div class="stat-label">Districts Covered</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">The People</div>
+      <h2 class="section-title">Meet Our Leadership Team</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-avatar">AH</div>
+        <div class="team-name">Arman Hossain</div>
+        <div class="team-role">CEO & Co-Founder</div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">RA</div>
+        <div class="team-name">Rina Ahmed</div>
+        <div class="team-role">CTO & Co-Founder</div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">KJ</div>
+        <div class="team-name">Kamal Jahan</div>
+        <div class="team-role">Head of Operations</div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">SP</div>
+        <div class="team-name">Sabrina Parvin</div>
+        <div class="team-role">Head of Marketing</div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">MN</div>
+        <div class="team-name">Masud Noor</div>
+        <div class="team-role">Head of Trust & Safety</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="reveal">
+      <h2 class="cta-title">Join Our Growing Community</h2>
+      <p class="cta-subtitle">Be part of Bangladesh's fastest-growing marketplace</p>
+      <div class="cta-buttons">
+        <a href="sell.html" class="btn btn-white btn-lg"><i class="fas fa-plus"></i> Post Free Ad</a>
+        <a href="contact.html" class="btn btn-outline btn-lg"><i class="fas fa-envelope"></i> Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-brand-logo">BuySell<span>BD</span></div><p class="footer-brand-desc">Bangladesh's most trusted online marketplace. Buy and sell anything, anywhere.</p></div>
+    <div><div class="footer-col-title">Quick Links</div><div class="footer-links"><a href="index.html">Home</a><a href="products.html">Browse</a><a href="sell.html">Sell Now</a></div></div>
+    <div><div class="footer-col-title">Support</div><div class="footer-links"><a href="contact.html">Help Center</a><a href="#">Safety Tips</a><a href="#">Privacy Policy</a></div></div>
+    <div><div class="footer-col-title">Contact</div><div class="footer-links"><a href="mailto:support@buysellbd.com.bd">support@buysellbd.com.bd</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 BuySell Bangladesh. All rights reserved.</span><span style="color:rgba(255,255,255,0.4);">Made with ❤️ in Bangladesh 🇧🇩</span></div>
+</footer>
+
+<button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+<style>
+@media(max-width:768px){.about-mission-grid{grid-template-columns:1fr!important} div[style*="grid-template-columns:1fr 1fr"]{display:block!important}}
+</style>
+</body>
+</html>

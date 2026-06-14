@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browse Products — BuySell Bangladesh</title>
+  <meta name="description" content="Browse thousands of listings on BuySell Bangladesh. Filter by category, location, price and condition."/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-logo">BuySell<span>BD</span></div>
+  <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+</div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">BuySell<span>BD</span></a>
+    <div class="nav-search search-with-suggestions">
+      <input type="text" id="product-search" placeholder="Search products..."/>
+      <button class="nav-search-btn"><i class="fas fa-search"></i> Search</button>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link active">Browse</a>
+      <a href="categories.html" class="nav-link">Categories</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+      <a href="sell.html" class="nav-sell-btn"><i class="fas fa-plus"></i> Sell Now</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="products.html" class="nav-link">Browse Products</a>
+  <a href="categories.html" class="nav-link">Categories</a>
+  <a href="sell.html" class="nav-link">Post Free Ad</a>
+</div>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> Browse Products</div>
+  <h1>Browse All Products</h1>
+  <p>Find great deals from trusted sellers across Bangladesh</p>
+</section>
+
+<div class="products-layout">
+  <!-- Sidebar Filters -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Category <span class="clear">Clear</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="all" checked/><span class="filter-label">All Categories</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Mobiles"/><span class="filter-label">Mobile Phones</span><span class="filter-count">48,200</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Laptops"/><span class="filter-label">Laptops</span><span class="filter-count">22,100</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Vehicles"/><span class="filter-label">Vehicles</span><span class="filter-count">31,500</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Motorcycles"/><span class="filter-label">Motorcycles</span><span class="filter-count">18,700</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Property"/><span class="filter-label">Property</span><span class="filter-count">56,300</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Fashion"/><span class="filter-label">Fashion</span><span class="filter-count">94,800</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Appliances"/><span class="filter-label">Home Appliances</span><span class="filter-count">29,400</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Furniture"/><span class="filter-label">Furniture</span><span class="filter-count">15,200</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Books"/><span class="filter-label">Books</span><span class="filter-count">8,900</span></div>
+      <div class="filter-option"><input type="radio" name="cat" value="Sports"/><span class="filter-label">Sports</span><span class="filter-count">11,600</span></div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">Location <span class="clear">Clear</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="all" checked/><span class="filter-label">All Bangladesh</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="Dhaka"/><span class="filter-label">Dhaka</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="Chattogram"/><span class="filter-label">Chattogram</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="Sylhet"/><span class="filter-label">Sylhet</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="Rajshahi"/><span class="filter-label">Rajshahi</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="Khulna"/><span class="filter-label">Khulna</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="Barishal"/><span class="filter-label">Barishal</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="Rangpur"/><span class="filter-label">Rangpur</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="Mymensingh"/><span class="filter-label">Mymensingh</span></div>
+      <div class="filter-option"><input type="radio" name="loc" value="Cox's Bazar"/><span class="filter-label">Cox's Bazar</span></div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">Price Range (৳)</div>
+      <div class="price-range-inputs">
+        <input type="number" class="price-input" id="price-min" placeholder="Min"/>
+        <input type="number" class="price-input" id="price-max" placeholder="Max"/>
+      </div>
+      <button id="apply-price" class="btn btn-primary btn-sm" style="margin-top:0.75rem;width:100%;justify-content:center;">Apply</button>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">Condition</div>
+      <div class="filter-option"><input type="checkbox" value="new"/><span class="filter-label">Brand New</span></div>
+      <div class="filter-option"><input type="checkbox" value="like-new"/><span class="filter-label">Like New</span></div>
+      <div class="filter-option"><input type="checkbox" value="good"/><span class="filter-label">Good Condition</span></div>
+      <div class="filter-option"><input type="checkbox" value="fair"/><span class="filter-label">Fair Condition</span></div>
+    </div>
+  </aside>
+
+  <!-- Products Area -->
+  <main>
+    <div class="products-header">
+      <div class="products-count">Showing <span id="results-count">24</span> results</div>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <select class="products-sort">
+          <option>Newest First</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Most Popular</option>
+        </select>
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+          <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-grid">
+      <a href="product.html" class="product-card" data-name="iPhone 14 Pro" data-category="Mobiles" data-location="Dhaka" data-price="95000">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#e0f2fe,#bae6fd);display:flex;align-items:center;justify-content:center;font-size:3rem;">📱</div>
+          <span class="product-badge featured">Featured</span>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 95,000</div>
+          <div class="product-name">Apple iPhone 14 Pro 256GB Deep Purple</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Gulshan, Dhaka &nbsp;|&nbsp; Used</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">RK</div><span class="seller-name">Rakib K.</span></div><span class="product-date">2 hrs ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Dell Laptop" data-category="Laptops" data-location="Chattogram" data-price="55000">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#dbeafe,#bfdbfe);display:flex;align-items:center;justify-content:center;font-size:3rem;">💻</div>
+          <span class="product-badge new">New</span>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 55,000</div>
+          <div class="product-name">Dell Inspiron 15 Core i5 12th Gen 8GB RAM</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Agrabad, Chattogram &nbsp;|&nbsp; New</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">SA</div><span class="seller-name">Sadia A.</span></div><span class="product-date">5 hrs ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Honda CB Hornet" data-category="Motorcycles" data-location="Rajshahi" data-price="185000">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#f0fdf4,#bbf7d0);display:flex;align-items:center;justify-content:center;font-size:3rem;">🏍️</div>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 1,85,000</div>
+          <div class="product-name">Honda CB Hornet 160R 2022 Excellent Condition</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Rajshahi &nbsp;|&nbsp; Used</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">TH</div><span class="seller-name">Tanvir H.</span></div><span class="product-date">1 day ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Samsung AC" data-category="Appliances" data-location="Sylhet" data-price="42000">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#fef3c7,#fde68a);display:flex;align-items:center;justify-content:center;font-size:3rem;">❄️</div>
+          <span class="product-badge featured">Featured</span>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 42,000</div>
+          <div class="product-name">Samsung 1.5 Ton Inverter AC Energy Saving</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Sylhet &nbsp;|&nbsp; Used — Good</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">NI</div><span class="seller-name">Nadia I.</span></div><span class="product-date">3 hrs ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Apartment Dhaka" data-category="Property" data-location="Dhaka" data-price="25000">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#ede9fe,#ddd6fe);display:flex;align-items:center;justify-content:center;font-size:3rem;">🏢</div>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 25,000/mo</div>
+          <div class="product-name">3 BHK Furnished Apartment for Rent Mirpur 10</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Dhaka &nbsp;|&nbsp; Apartment</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">KR</div><span class="seller-name">Karim R.</span></div><span class="product-date">2 days ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Sony Camera" data-category="Electronics" data-location="Khulna" data-price="38000">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#fce7f3,#fbcfe8);display:flex;align-items:center;justify-content:center;font-size:3rem;">📷</div>
+          <span class="product-badge new">New</span>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 38,000</div>
+          <div class="product-name">Sony ZV-E10 Mirrorless Camera 16-50mm Lens</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Khulna &nbsp;|&nbsp; Brand New</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">MB</div><span class="seller-name">Mehedi B.</span></div><span class="product-date">6 hrs ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Panjabi Set" data-category="Fashion" data-location="Dhaka" data-price="3500">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#ecfdf5,#a7f3d0);display:flex;align-items:center;justify-content:center;font-size:3rem;">👘</div>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 3,500</div>
+          <div class="product-name">Premium Handloom Panjabi Set — Eid Collection</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Newmarket, Dhaka &nbsp;|&nbsp; New</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">ZB</div><span class="seller-name">Zara B.</span></div><span class="product-date">4 hrs ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Toyota Corolla" data-category="Vehicles" data-location="Dhaka" data-price="2200000">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#fff7ed,#fed7aa);display:flex;align-items:center;justify-content:center;font-size:3rem;">🚗</div>
+          <span class="product-badge featured">Featured</span>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 22,00,000</div>
+          <div class="product-name">Toyota Corolla 2019 Hybrid — Low Mileage</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Uttara, Dhaka &nbsp;|&nbsp; Used</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">AM</div><span class="seller-name">Arif M.</span></div><span class="product-date">1 day ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Study Table" data-category="Furniture" data-location="Dhaka" data-price="8500">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#fdf4ff,#e9d5ff);display:flex;align-items:center;justify-content:center;font-size:3rem;">🪑</div>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 8,500</div>
+          <div class="product-name">Teak Wood Study Table with Shelves — Excellent</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Mohammadpur, Dhaka &nbsp;|&nbsp; Used</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">HR</div><span class="seller-name">Habib R.</span></div><span class="product-date">12 hrs ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Cricket Bat" data-category="Sports" data-location="Chittagong" data-price="4500">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#ecfdf5,#bbf7d0);display:flex;align-items:center;justify-content:center;font-size:3rem;">🏏</div>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 4,500</div>
+          <div class="product-name">Grade A English Willow Cricket Bat — Full Size</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Chattogram &nbsp;|&nbsp; New</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">RS</div><span class="seller-name">Rahim S.</span></div><span class="product-date">8 hrs ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="HSC Books" data-category="Books" data-location="Dhaka" data-price="1200">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#fffbeb,#fde68a);display:flex;align-items:center;justify-content:center;font-size:3rem;">📚</div>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 1,200</div>
+          <div class="product-name">Complete HSC Science Book Set — 2024 Edition</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Dhanmondi, Dhaka &nbsp;|&nbsp; Good</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">FJ</div><span class="seller-name">Farhan J.</span></div><span class="product-date">1 day ago</span></div>
+      </a>
+
+      <a href="product.html" class="product-card" data-name="Mango Farm" data-category="Agriculture" data-location="Rajshahi" data-price="150000">
+        <div class="product-img-wrap">
+          <div style="width:100%;height:100%;background:linear-gradient(135deg,#fffbeb,#fcd34d);display:flex;align-items:center;justify-content:center;font-size:3rem;">🥭</div>
+          <button class="product-wishlist" onclick="event.preventDefault()"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-body">
+          <div class="product-price">৳ 1,50,000</div>
+          <div class="product-name">Rajshahi Mango Garden — 5 Bigha, Premium Location</div>
+          <div class="product-meta"><i class="fas fa-map-marker-alt"></i> Rajshahi &nbsp;|&nbsp; Agriculture</div>
+        </div>
+        <div class="product-footer"><div class="product-seller"><div class="seller-avatar">AH</div><span class="seller-name">Alam H.</span></div><span class="product-date">3 days ago</span></div>
+      </a>
+    </div>
+
+    <!-- Load more -->
+    <div style="text-align:center;margin-top:2rem;" class="reveal">
+      <button class="btn btn-primary" onclick="showToast('Loading more listings...','info')">
+        <i class="fas fa-sync-alt"></i> Load More Listings
+      </button>
+    </div>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-logo">BuySell<span>BD</span></div>
+      <p class="footer-brand-desc">Bangladesh's most trusted online marketplace. Buy and sell anything, anywhere.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Browse Products</a>
+        <a href="sell.html">Post Free Ad</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Support</div>
+      <div class="footer-links">
+        <a href="contact.html">Help Center</a>
+        <a href="#">Safety Tips</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-links">
+        <a href="mailto:support@buysellbd.com.bd">support@buysellbd.com.bd</a>
+        <a href="tel:+8809612345678">+880 961 234 5678</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 BuySell Bangladesh. All rights reserved.</span>
+    <span style="color:rgba(255,255,255,0.4);">Made with ❤️ in Bangladesh 🇧🇩</span>
+  </div>
+</footer>
+
+<button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>
